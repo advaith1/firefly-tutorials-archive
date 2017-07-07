@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<body>
+<h1>3: WHAT IS FIREFLY ?</h1><hr class="page"><div class="tutorial_text"><p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>OK, what we want to create is a breakout-style game. In a breakout game, you typically have a ball, a bat, and some bricks. In this tutorial, we want to create a super breakout game, with impressive graphics, made in 3D.</p>
+
+			<p>First, unlike a 2d game where everything has already been setup by fusion, for a 3d game we need to setup a few things ourselves such as where in the world our 3d game will happen, where will the camera man stand and where are all the 3d objects going to start.</p>
+
+			<p>Luckily the Fusion Team have created an extension to help with all of that, so find the extension called Firefly and install it. Once installed it will add some new firefly objects that we can use. Firefly itself consists of a main engine and then loads of little node objects that each do different things, I will list them all here now - but dont worry too much about them or what they do as we will try to cover most of them in a later stage.Wow, thats an awful lot of new objects to learn and understand but not to worry we will try and gradually bring them in so you understand what they are and what they do and more importantly how to make them do what you want them to do.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:20%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:20%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+			<table align="center" cellpadding="5" cellspacing="5" style="width:100%">
+				<tbody>
+					<tr>
+						<td style="text-align:center; vertical-align:middle; width:100px"><img alt="" src="./files/chocobreak_html_31.png" width="32"></td>
+						<td rowspan="2">
+						<p>This&nbsp;<strong>Firefly Engine</strong>&nbsp;object does almost all the work within these set of extensions. First, you should add one to the Frame and then resize it to cover the frame. The area covered by this extension dictates the resolution of your 3D scene.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Engine</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_33.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Camera</strong>&nbsp;object is necessary to draw anything to the Frame. It works similarly to how the Engine object works, except the area covered by the Camera object dictates where to draw the scene to (through the camera). Through this system, split-screen effects can be achieved, but usually the Engine object and your singular Camera will both be at the same point on the Frame and both be of the same size.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Camera</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_30.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly 2D Text</strong>&nbsp;object puts 2d text inside your 3d world useful for things like names above heads and other User Interface information.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly 2D Text</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_37.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Image</strong>&nbsp;object puts images inside your 3d world useful for backdrops for all that User Interface information you have.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Image</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_32.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Material Cache</strong>&nbsp;object represents and acts as an array of Materials. A Material has an Index that it resides at within a Material Cache object, and it can also have a name. Most node objects require one or more materials to render something other than a grey mass in the scene.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Material Cache</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_38.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Movement</strong>&nbsp;object is one of the most important objects in the FireFly set as it helps you move all your other nodes around.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Movement</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_39.png" width="32"></td>
+						<td rowspan="2">
+						<p>With the&nbsp;<strong>Firefly Node Animated Mesh</strong>&nbsp;node you can insert an animated mesh into the scene. An Animated Mesh is animated across a number of Frames by calculating the position, scale, and rotation of the mesh's Joints using each one's collection of Key Frames across those Frames.&nbsp;<br>
+						<br>
+						So, an Animated Mesh might have many Joints, and each Joint can have many Key Frames of a Position and/or Scale and/or Rotation type. When the animation takes place, it calculates what Position, Scale, and Rotation each Joint should be set to at a given Frame by working out each difference between the last and next Key Frame.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Animated Mesh</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_34.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Billboard</strong>&nbsp;object is like a 3d sprite: A 2d element, which always looks to the camera. It is usually used for explosions, fire, lensflares, particles and things like that.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Billboard</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_40.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Dummy</strong>&nbsp;object isn't really an object at all, in fact it isnt anything and you will never see it in through the Node Camera but its incredibly usefull for holding data for example you could have players mark an area in your world and put a dummy node there and use its values in your calculations.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Dummy</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_41.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Light</strong>&nbsp;object places various light sources such as spot lights or directional lights in your scene, Lights are often needed to brighten up a scene. Any Material (from the Material Cache object) that has its 'Lighting' setting set to true/on (which it is by default) means that it requires light to be rendered in some colour other than black.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Light</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_42.png" width="32"></td>
+						<td rowspan="2">
+						<p>With the&nbsp;<strong>Firefly Node Particle System</strong>&nbsp;you can insert a particle emitter into the scene. A Particle System node can be one of these types: Point, Box, Sphere, Animated Mesh Node, Cylinder, Mesh, Ring. These types describe the shape of the emitter. What is actually emitted is similar to a Billboard node object.&nbsp;<br>
+						<br>
+						A Particle System Node also can one or more Affecters. An Affecter is something located at a X,Y,Z position within the scene and will affect particles generated by the node object in different ways. The different types of Affecters are 'Attraction', 'Fade-Out', 'Gravity', 'Rotation', 'Scale'.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Particle System</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_43.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Primitive</strong>&nbsp;object is capable of very quickly creating a mesh in the shape of standard objects such as cubes, spheres, arrows and planes.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Primitive</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_44.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Static Mesh</strong>&nbsp;object isnt static as in not able to move its just static as in not containing any animations, most of your 3d objects will be static mesh's.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Static Mesh</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_35.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Terrain</strong>&nbsp;object is capable of very quickly loading terrains and updating the indices at runtime to enable viewing very large terrains. It uses a CLOD (Continuous Level of Detail) algorithm which updates the indices for each patch based on a LOD (Level of Detail) which is determined based on a patch's distance from the camera.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Terrain</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_45.png" width="32"></td>
+						<td rowspan="2">
+						<p>The&nbsp;<strong>Firefly Node Text</strong>&nbsp;object lets you insert 2D text within the 3D scene. It works similar to the Billboard object in that it will always face the camera and the size of the text as it appears is not dependant on how close the object is to the camera.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Text</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_36.png" width="32"></td>
+						<td rowspan="2">
+						<p>This&nbsp;<strong>Firefly Node Water</strong>&nbsp;object for rendering an animated water surface mesh. Looks really good when a Material with Transparent Reflection is used.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Node Water</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img alt="" src="./files/chocobreak_html_46.png" width="32"></td>
+						<td rowspan="2">
+						<p>This&nbsp;<strong>Firefly Sky</strong>&nbsp;object object is not quite a node object in that you can only have one in the scene, and it cannot be moved around. you can however choose to have a skysphere or a skybox which will allow your players to feel that the world is massive around them.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Firefly Sky</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img src="./files/chocobreak_html_78b0f45b.png"></td>
+						<td>
+						<p>The&nbsp;<strong>Counter</strong>&nbsp;object : as its name indicates, this object holds numerical values and, at your option, displays it on the Frame. The value can be displayed as a number, or as a percentage bar, either horizontal or vertical. This object is very useful for complex applications where you need to store data. You can&nbsp;<strong>add to</strong>,&nbsp;<strong>subtract from</strong>, and&nbsp;<strong>set</strong>&nbsp;a counter.</p>
+
+						<p><em><strong>Tip</strong>&nbsp;: In the counter's  Properties, you can set the starting value, as well as the highest and lowest numbers it will be able to work with. It is very important to use these settings for percentage bars or you may not see them do anything at all when running your application.</em></p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img src="./files/chocobreak_html_m6670f71a.png"></td>
+						<td>
+						<p>The&nbsp;<strong>Lives</strong>&nbsp;object : displays the number of lives remaining for the player. It can display it as individual drawings, or as a number.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img src="./files/chocobreak_html_40e45f17.png"></td>
+						<td>
+						<p>The&nbsp;<strong>Hi-Score</strong>&nbsp;object : automatically displays and manages a table of high scores for your game.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle"><img src="./files/chocobreak_html_776fcdc9.png"></td>
+						<td>
+						<p>The&nbsp;<strong>Button</strong>&nbsp;object : this object displays a Windows' style button, a checkbox or a radio button. Very useful when you have to create interfaces. Buttons let your user/player control things.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Wow, thats an awful lot of new objects to learn and understand but not to worry we will try and gradually bring them in so you understand what they are and what they do and more importantly how to make them do what you want them to do.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-2.html">previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-4.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

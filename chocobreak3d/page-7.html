@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<body ><h1>7: OUR FIRST FEW 3D OBJECTS</h1><hr class="page"><div class="tutorial_text"><table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>OK, let's drop our first objects. Every object in Firefly is classed as a&nbsp;<strong>Node</strong>&nbsp;and you can have many different types of node, however the main ones will be&nbsp;<strong>Primitive Nodes</strong>&nbsp;and&nbsp;<strong>Static Mesh Nodes</strong>, the first thing our breakout game needs is a floor, a floor is just a flat surface so we can use a&nbsp;<strong>Primitive Node</strong>&nbsp;for that as we dont need to model something special. just like we did with the other firefly objects add a&nbsp;<strong>Primitive Node</strong>&nbsp;to your world.</p>
+
+			<p>As we will have a few primitive nodes it might get confusing so we will rename this node&nbsp;<strong>Floor</strong>&nbsp;you could of course call it anything you wish, right mouse the node and choose&nbsp;<strong>Rename</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_63.png" width="329"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">If you change the&nbsp;<strong>Primitive Type</strong>&nbsp;in the  Properties from&nbsp;<strong>Cube</strong>&nbsp;to&nbsp;<strong>Plane</strong>&nbsp;you can see that the default tile values are all set at 10.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_64.png" width="329"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">this will create a plane that has grids that are 10 units wide by 10 units tall and have 10 of them across and 10 of them down. which looks something like this.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_65.png" width="636"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Everything you see inside a 3D computer world is made up of Triangles, the more triangles you have on screen at any one time the longer your computer will take making that image, so where possible you need to use as little triangles as possible. Our floor at the moment is using 200 triangles when in fact we only really need 2 triangles.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_66.png" width="636"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Making the floor out of just 2 triangles will speed up the Rendering of our screen and inturn make the FPS of our game better, however that floor looks a little too small, it is currently 100x100 and 1x1, we need a floor that is 400 units wide,<br>
+			<br>
+			Now that we know what settings are best for our game change them in your game by setting the tile settings to 400x400 and 1x1.&nbsp;<strong>Run the Frame</strong>&nbsp;to see your floor in the world.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_67.png" width="636"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Oh dear, the floor is black, but dont worry we'll get to that in a minute, firstly lets explain about the camera setting Field of View (FOV for short) setting,&nbsp;how much of the scene the camera can see at once. A&nbsp;<em>wide-angle</em>&nbsp;lens gives a wider field of view, but you have to be closer to things to be able to see them, and there is also greater perspective distortion. At the other extreme, a&nbsp;<em>telephoto</em>lens gives a very narrow field of view,&nbsp;but can take pictures of things from much further away. while its not exactly a zoom it can be used like one, but be careful as rotating cameras with a FOV with high or low FOV values can cause motion sickness.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/test.gif" width="613"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Currently the cameras FOV is set at 72 I think that distorts the floor a little too much so drop it down to 65.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_27.png" width="273"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now then why is the floor black ? is because we havent told the engine what to make our floor look like. In 3D everything you see is given a material and/or a texture. which tells the engine what colour everything should be and what  Properties such as reflectivity and opacity to make things. In&nbsp;<strong>Firefly</strong>&nbsp;we use a&nbsp;<strong>Material Cache</strong>&nbsp;add a new object from the menu and select&nbsp;<strong>Material Cache</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_68.png" width="325"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">There are loads of different settings for Materials as there are so many different effects that&nbsp;<strong>Firefly</strong>&nbsp;is capable of doing, however as this is your first&nbsp;<strong>Firefly</strong>&nbsp;tutorial we will stick to the very easy stuff and you can mess with all the other settings at a later date.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_69.327x370-cropx0y0-is.png" width="327"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Think of the&nbsp;<strong>Material Cache</strong>&nbsp;as store cupboard where you keep different things, starting at 0 and going as high as you need it too, each space in the cache holds 1 material and upto 4 textures.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_70.png" width="300"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Give your first material a name i suggest&nbsp;<strong>Wooden Flooring</strong>&nbsp;and then hit the new material button and it will create a material called&nbsp;<strong>0 (Wooden Flooring)</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_71.png" width="329"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>Click into the line that says&nbsp;<strong>1st Texture</strong>&nbsp;and there will be another line that says&nbsp;<strong>1st Texture</strong>&nbsp;click into that one and you will see the blue box just like we did for the skybox textures.Find the&nbsp;<strong>Models</strong>&nbsp;directory and then the&nbsp;<strong>Textures</strong>&nbsp;Directory, choose&nbsp;<strong>Wooden Floor</strong>&nbsp;and press OK</p>
+
+			<p>We have the Floor in game and we have the Material ready in the&nbsp;<strong>Material Cache</strong>&nbsp;in the next step we'll put the material on the floor.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-6.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-8.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

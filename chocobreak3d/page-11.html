@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+
+
+<body ><h1>11. MOVING AND ROTATING IN 3D</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>Back in Step 6 we learnt about moving the camera using&nbsp;<strong>Vectors</strong>&nbsp;which are really just X, Y, Z co-ordinates, X = left and right, Y = up and down and Z = forwards and backwards.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_24.png" width="403"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">So to move our Green Pole to the left we need to set a -X value - as we know our floor is 400 wide (the size we set when we made it), we know that our green pole needs to be at -200, so click on it and set its Position X to -100.&nbsp;it also looked like its too low down too, so we need to raise it up, set the Y to 20, that will bring it up so that it sits on the floor instead of being halfway through it.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_103.png" width="637"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">so now we have it in the right place how do we go about rotating it, now you might be thinking that you can see a Rotation X value, so you could just set it to 1 and away it goes, well your right in the fact that will rotate it - however it will only do it once at the start of the Frame, what we need to do is setup something that&nbsp;<strong>Always</strong>&nbsp;rotates it by 1. So go back to the event viewer. Double click on&nbsp;<strong>New Condition</strong>&nbsp;Choose the&nbsp;<strong>Special</strong>&nbsp;icon which looks like a cog, and select&nbsp;<strong>Always</strong>.&nbsp;Now its time to set its rotation every Frame, like we did before&nbsp;<strong>Right Mouse</strong>&nbsp;the box under the&nbsp;<strong>Left Pole</strong>&nbsp;and level with&nbsp;<strong>Always</strong>&nbsp;and choose&nbsp;<strong>Node  Properties</strong>&nbsp;-&gt;&nbsp;<strong>Rotation</strong>&nbsp;-&gt;&nbsp;<strong>Set Z Angle.</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_104.png" width="604"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>In the expression window we need to tell it what angle we want to rotate as a number, so if we were to write +1 the Red light will stay on as +1 isnt a real number but what we can do is say whatever the rotation is now + 1, so how do we do that ? remember how we picked a material out of the material cache by right mousing its icon. we can do the same every object only instead of a material we can pick a number, in our case the left poles current Z angle. so right mouse the&nbsp;<strong>Left Pole</strong>&nbsp;select&nbsp;<strong>Node  Properties</strong>&nbsp;-&gt;&nbsp;<strong>Rotation</strong>&nbsp;-&gt;&nbsp;<strong>Get Z Angle</strong>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_105.png" width="789"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now that we have its current angle we need to choose either to rotate left -1 or right +1, we could of course choose +2 +30 or whatever we choose but the rotating will be smoother if we choose +1, Type&nbsp;<strong>+1</strong>&nbsp;after ZRotation( "Left Pole" )</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_106.png" width="515"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3"><strong>CHALLENGE TIME : using what you learned in the last few steps add a new static mesh call it Right Pole, make the tube pink&nbsp;and move it to +200 X and +20 Y dont forget to make it rotate.&nbsp;</strong>Hint : Re-read step 10 - remember you already loaded the pink material into slot 3 of the material cache.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_107.png" width="637"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Once yours matches mine you can proceed to step 12.&nbsp;<strong>GOOD LUCK</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-10.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-12.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

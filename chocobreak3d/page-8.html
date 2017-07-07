@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<body ><h1>8: CONDITIONS AND ACTIONS</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>Once we put any 3D Model even a primitive one into the world we need to assign them a material, To do that, we will now discover the&nbsp;<strong>Event Editor</strong>.</p>
+
+			<p>Locate the "<strong>Event editor</strong>" button in the tool bar, and click on it.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_29.png" width="99"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">The display should look like this :</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3535/chocobreak_html_28.png"><img alt="" src="./files/chocobreak_html_28.514x0-is.png" width="514"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">The icons across the top denote all the objects we have added to our scene plus a few more helpful ones that will help us later, under those are what are called&nbsp;<strong>Conditions</strong>&nbsp;we need a new condition called&nbsp;<strong>Start of Frame</strong>&nbsp;click on&nbsp;<strong>New Condition</strong>&nbsp;then on the chess board icon and choose&nbsp;<strong>Start of Frame</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_72.png" width="675"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Once we have a condition set we need to say what happens when this condition is met, so in this case what happens at the start of a Frame, we want to put our floor material on the floor, so right click inside the box that matches our floor thats also on the same line as our condition and choose&nbsp;<strong>Load Material</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_73.png" width="872"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">We now have whats called the expression window, this window will ask you a series of questions which you need to answer and keep the green light lit, if ever the light turns red something went wrong and you need to fix it before continuing, so lets see what our first question is.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_74.png" width="508"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">So our first question is&nbsp;<strong>Get material from Material Cache Object (0 to clear)</strong>&nbsp;while not the best formed question in the world what its trying to say is which material do we need, to answer the question we need to right click our material cache from the icons at the bottom and select&nbsp;<strong>Get a Material</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_75.png" width="504"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">its filled in some text for us and oh no the light has turned red, that means something is wrong, luckily for us it has also highlighted a section of text.<strong>&gt;Enter Material's Index&lt;</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_76.png" width="504"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">So what is it asking now? it wants to know which material we want from the cache as we only have 1 material in our cache, it should be easy, however you need to remember that like most lists in computers the number starts at 0 and not 1 so type in 0.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_77.png" width="504"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Ok, we have a green light that means we answered all the questions on this window lets move to the next click&nbsp;<strong>OK</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_78.png" width="504"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">We have another question to answer and this time its&nbsp;<strong>Enter index of nodes material</strong>, some models can have more than one place to put a texture, imagine a dice for example that could have 6 different textures. So this question is asking which place on the model should it put this texture as we only have 1 place which is Index 0 - as 0 is already entered and we have a green light, we can just hit&nbsp;<strong>OK</strong>&nbsp;and accept the default value.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_79.png" width="673"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">We now have a green tick to show we have an action in that place, so lets&nbsp;<strong>Run Frame</strong>&nbsp;again and see our wonderful floor.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_80.png" width="637"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Hmmm... something went wrong</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-7.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-9.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

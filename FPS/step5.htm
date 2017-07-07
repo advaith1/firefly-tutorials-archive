@@ -1,0 +1,67 @@
+<html>
+<head>
+
+<title>Clickteam Fusion 2.5 Tutorial</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+</head>
+<body>
+<div id="header"><img src="images/cfusion.png" border="0">
+<h1>3D FPS Tutorial - <strong>Guide</strong></h1>
+</div>
+
+<h1>5. TIME TO GET OUR FEET WET</h1>
+
+<p>We've added Sky, Land, Fog, and Movement all that's left is Water, luckily Firefly has you covered for water and waves too, add a <strong>Firefly Node - Water</strong> to your frame. The default values will give you a nice choppy sea althogh that would be great normally our game is set in the mountains with a very calm moat, so big waves will look a littkle out of place, so we need to reduce the size of the waves dramatically.</p>
+
+<center><img src="images/chocobreak_html_34.png" class="border"></center>
+
+<p>A wave height of 2 units is very windy drop this down to 1, just to give the water some movement just not much, the wave speed of 300 is again way to fast, our lake is very calm so raise the speed to 2000. It may sound strage but the speed of the water is how many cycles it takes to do one wave so the larger the number the longer it takes to do a wave cycle. A wave length of 10 is a bit too fast aswell so change that to 100, this value is how choppy the water is a small number means a smaller distance between each wave. </p>
+
+<center><img src="images/chocobreak_html_35.png" class="border"></center>
+
+<p>As with most Firefly Nodes that we see, we need to set a material on it, Add a new material to your cache call it <strong>Water</strong> and change the type from solid to <strong>Transparent Reflection 2 Layers</strong> this setting will make our water see-through and give a reflection of the sky, we could set the 1st texture as our sky reflection but as our water isnt very promienet theres not really much point if you had a very bright sun or moon in yoru sky then i would set the texture for the added realism, but for now skip it.</p>
+
+<center><img src="images/chocobreak_html_36.png" class="border"></center>
+
+<p>We also need to set the main color of the water, change the <strong>Emissive Colour</strong> to 0,64,64 which is the third color across the top, also set the fog value to ON, so that at long distances it doesn't look out of place. As we will no doubt be going underwater at some point turn off the frontface culling this will allow us to see the water when underneath it. Make sure you <strong>Load the Material</strong> from the cache at the start of the frame.</p>
+
+<center><img src="images/chocobreak_html_37.png" class="border"></center>
+
+<p>All we need now is to scale it and move it into position, set the scale X to 20 and the scale Z to 20 and set the position of the Y to 15, this will ensure it fits the whole of our terrain and raise it to the correct level. Have a look at the water in the game and hopefully it matches this.</p>
+
+<center><img src="images/chocobreak_html_38.png" class="border"></center>
+
+<p>One last thing before we move onto the next step, most games when you enter water do some funky camera effects to ensure your know your underwater, so lets add a few in our game. As we just set our water position Y to 15, we can do a simple check that if our camera is lower than 15 then to do some effects, create a new condition, click on the camera and select <strong>Node Properties -> Position -> Compare Y position to a value</strong> change the comparision method to lower and enter 15 in the box. Also create another one which is greater or equal to 15.</p>
+
+<center><img src="images/chocobreak_html_39.png" class="border"></center>
+
+<p>If we just left them like that they would activate every frame and any effects we do would constantly be turning on, wasting precious CPU time. So we need to add a qualifier, insert a new condition onto the existing one, click the special icon and select <strong>Compare to a global value</strong> choose underwaterYN select equals and enter 0, do the same for the second one but change it to equals 1.</p>
+
+<center><img src="images/chocobreak_html_40.png" class="border"></center>
+
+<p>Now to set the effects for underwater, the first being the toggle for underwater set the gloabl value <strong>underwaterYN</strong> to 1, set the fog color to 0,105,128 and the fog start distance to 0 and the fog end distance to 100. we then need to reset them all back to how they were when we come back out of the water, set the gloabl value <strong>underwaterYN</strong> back to 0, set the fog color back to 170,120,90 the fog start distance back to 100 and the fog end distance back to 1000.</p>
+
+<center><img src="images/chocobreak_html_41.png" class="border"></center>
+
+<p>Although we only did a simple change you could add even more realism by adding a camera shader to give the image a wibbly wobbly effect and many other visual effects tricks but for now a simple fog routine will be realistic enough for this tutorial.</p>
+
+<center><img src="images/chocobreak_html_42.png" class="border"></center>
+
+<div id="footer">
+<p>For more information, tutorials, examples and walk-thrus visit
+the website.</p>
+
+<p>Website: <a href="http://www.clickteam.com" target=
+"new">http://www.clickteam.com</a> <br> Community: <a href=
+"http://community.clickteam.com" target=
+"new">http://community.clickteam.com</a></p>
+
+<p>The Clickteam Fusion logo and all content copyright (c) 2015
+Clickteam. Unless otherwise stated.</p>
+</div>
+
+</body>
+</html>

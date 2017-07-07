@@ -1,0 +1,97 @@
+﻿<html>
+<head>
+<title>Clickteam Fusion 2.5 Tutorial</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+
+</head>
+<body>
+
+<div id="header"><img src="images/cfusion.png" border="0">
+<h1>3D FPS Tutorial - <strong>Guide</strong></h1>
+</div>
+
+<h1>2. THE FPS CAMERA FEATURE</h1>
+
+<p>For the Chocobreak 3D guide we only added a static camera and once it was setup that was it we left it in place and never really touched it again, while that was quick and easy we here at Clickteam know you are going to want to do more with your cameras so we want to make things as easy as possible for you, so we added a FPS mode to the camera settings. We need something to move the camera around and hopefully you guessed the best object for that is the movement object. Add one to your scene.</p>
+
+<center><img src="images/chocobreak_html_5.png" class="border"></center>
+
+<p>The FPS Camera mode relies on a few variables so lets setup some <strong>Global Values</strong>, if you have never setup global variables before you click on the title of your project, and then the values tab.</p>
+
+<center><img src="images/chocobreak_html_6.png" class="border"></center>
+
+<p>Setup the above values and enter the numbers as shown above, don't worry too much what they all mean at the moment, I will explain them all in a second and you can come back and adjust the values to suit your own playstyle.</p>
+
+<center><img src="images/chocobreak_html_7.png" class="border"></center>
+
+<p>Create an always condition, where the <strong>Firefly Movement</strong> joins it select <strong>FPS Camera Settings -> Move a FPS Camera with gravity</strong>. </p>
+<p>For each of the following questions use the mouse to select the correct answers</p>
+
+<p>"Enter an Firefly Camera Node's Fixed Value" set to <strong>Fixed( "Firefly Node - Camera" )</strong> click the camera node icon and select <strong>Retrieve fixed value</strong><br />
+<font color=blue><i>This value is asking which camera to move as a FPS camera.</i></font></p>
+
+<p>"Select Firefly Engine Fixed Value" set to <strong>Fixed( "Firefly Engine" )</strong> click the engine node icon and select <strong>Retrieve fixed value</strong><br />
+<font color=blue><i>This value is asking which engine contains the FPS camera.</i></font></p>
+
+<p>"Enter Old XMouse Coordinate" set to <strong>oldX</strong> click the special icon and select <strong>Retrieve a global value</strong> choose oldX<br />
+"Enter Old YMouse Coordinate" set to <strong>oldY</strong> click the special icon and select <strong>Retrieve a global value</strong> choose oldY<br />
+<font color=blue><i>The fps camera uses the old mouse values vs the new mouse values to judge how far the mouse has travelled.</i></font></p>
+
+<p>"Enter New XMouse Coordinate" set to <strong>XMouse</strong> click the keyboard icon and select <strong>Current X position of the mouse</strong> <br />
+"Enter New YMouse Coordinate" set to <strong>YMouse</strong> click the keyboard icon and select <strong>Current Y position of the mouse</strong> <br />
+<font color=blue><i>Both of these use Fusions in-built mouse routines that you should be familiar with already.</i></font></p>
+	
+<p>"Enter Rotation speed (decimal accepted)" set to <strong>rotationspeed</strong> click the special icon and select <strong>Retrieve a global value</strong> choose rotationspeed<br />
+<font color=blue><i>This value is how fast should the fps camera turn, this is sometimes referred to as mouse sensitivity so we could set up an options page and allow the player to change it based on their personal preference.</i></font></p>
+	
+<p>"Enter Movement speed (decimal accepted)" set to <strong>walk</strong> click the special icon and select <strong>Retrieve a global value</strong> choose walk be careful not to choose walkspeed<br />
+<font color=blue><i>This value we set manually based on when a character presses W or S (or any other key) that we will setup later in this step.</i></font></p>
+	
+<p>"Enter Strafing speed (decimal accepted)" set to <strong>strafe</strong> click the special icon and select <strong>Retrieve a global value</strong> choose strafe be careful not to choose strafespeed<br />
+<font color=blue><i>Just like the walk value we set this when a character presses A or D (or any key).</i></font></p>
+	
+<p>"Enter Vertical movement (1 = On, 0 = Off)" set to <strong>verticalYN</strong> click the special icon and select <strong>Retrieve a global value</strong> choose verticalYN<br />
+<font color=blue><i>This value sets whether the camera should move up and down in the direction the camera is pointing, turn this on when you want a free-look camera. when you are using a gravity value this will give a very bad camera shaking effect as the 2 forces fight each other.</i></font></p>
+	
+<p>"Enter Jumping movement (1 = On, 0 = Off)" set to <strong>jumpYN</strong> click the special icon and select <strong>Retrieve a global value</strong> choose jumpYN<br />
+<font color=blue><i>This value will trigger the built-in jumping action.</i></font></p>
+	
+<p>"Enter Jumping speed (decimal accepted)" set to <strong>jumpheight / 10.0</strong> click the special icon and select <strong>Retrieve a global value</strong> choose jumpheight and type / 10.0, which is a way to convert the Integer Global Values into a decimal one more on this later.<br />
+<font color=blue><i>This value sets how high the jump should last.</i></font></p>
+	
+<p>"Enter Gravity X Velocity (decimal accepted)" set to <strong>crosswind</strong> click the special icon and select <strong>Retrieve a global value</strong> choose crosswind<br />
+<font color=blue><i>This value will push or pull your camera along the X axis useful if you have a very strong crosswind, this effect will happen even if the camera is on the floor so make sure you only set it when the camera is in the air.</i></font></p>
+	
+<p>"Enter Gravity Y Velocity (decimal accepted)" set to <strong>gravityvalue</strong> click the special icon and select <strong>Retrieve a global value</strong> choose gravityvalue<br />
+<font color=blue><i>This value will push or pull your camera along the Y axis which we more commonly refer to as gravity, when set to 0 the camera will act as a free camera, you could set it to something like +5 to allow for jetpack travel, earth like gravity is around -1 but you could use something like -0.3 to give moon based gravity etc.</i></font></p>
+	
+<p>"Enter Gravity Z Velocity (decimal accepted)" set to <strong>headwind</strong> click the special icon and select <strong>Retrieve a global value</strong> choose headwind<br />
+<font color=blue><i>This value will push or pull your camera along the Z axis useful if you have a very strong headwind, this effect will happen even if the camera is on the floor so make sure you only set it when the camera is in the air.</i></font></p>
+
+<center><img src="images/chocobreak_html_8.png" class="border"></center>
+
+<p>Once finished your command should match this. As we explained earlier the camera compares the old x and Y values of the mouse to the new x and y values of the mouse. now that we have updated the camera, we need to set the oldX and oldY values. In the grid where <strong>Special Conditions</strong> and always join right mouse and select <strong>Change a global value -> Set</strong> for oldX, click the keyboard icon and select <strong>Current X position of the mouse</strong> and then again for oldY and click the keyboard icon and select <strong>Current Y position of the mouse</strong>.</p>
+
+<center><img src="images/chocobreak_html_9.png" class="border"></center>
+
+<p>Running the game now should allow you to move the camera around with the mouse.</p>
+
+<div id="footer">
+<p>For more information, tutorials, examples and walk-thrus visit
+the website.</p>
+
+<p>Website: <a href="http://www.clickteam.com" target=
+"new">http://www.clickteam.com</a> <br> Community: <a href=
+"http://community.clickteam.com" target=
+"new">http://community.clickteam.com</a></p>
+
+<p>The Clickteam Fusion logo and all content copyright (c) 2015
+Clickteam. Unless otherwise stated.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+
+<body><h1>13. LETS GET STARTED</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>Now that we have real light our fake light objects look a bit dull, so lets now set their light settings. click on the&nbsp;<strong>Material Cache</strong>&nbsp;and change each of the poles (red, green, pink) lighting setting back to on.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_128.png" width="330"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">So now were using the world light, lets look at how it looks in game</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_130.png" width="640"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Hmm very golden and very dull, thats not right at all, but its better than black so it's a start. Lets quickly run through what the 4 colour settings are, i know we changed a few of them for the sun and the pole ends, but we didnt really understand what we were changing.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">
+			<table align="center" cellpadding="5" cellspacing="5" style="width:100%">
+				<tbody>
+					<tr>
+						<td>Ambient Colour</td>
+						<td>Ambient colour is the colour of an object where it is in shadow. This colour is what the object reflects when illuminated by ambient light rather than direct light.</td>
+					</tr>
+					<tr>
+						<td>Diffuse Colour</td>
+						<td>Diffuse colour is the most instinctive meaning of the colour of an object. It is that essential colour that the object reveals under pure white light. It is perceived as the colour of the object itself rather than a reflection of the light.</td>
+					</tr>
+					<tr>
+						<td>Specular Colour</td>
+						<td>Specular colour is the colour of the light of a specular reflection (specular reflection is the type of reflection that is characteristic of light reflected from a shiny surface).</td>
+					</tr>
+					<tr>
+						<td>Emissive Colour</td>
+						<td>This is the self-illumination colour an object has.</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">For our poles i think we need the Ambient (Shadows) to be 0,0,0 black and the Emmisive colour to be 192,192,192 which will put a nice light inside the tube but not too bright as to take away the shading, set that for all 3 poles.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_129.png" width="330"><img alt="" src="./files/chocobreak_html_131.png" width="349"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Let run it now and see how it looks ?</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_132.png" width="640"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Perfect, now then we need a player to hit the ball, lucky we have a funky little animated man, so lets add an&nbsp;<strong>Firefly Node - Animated Mesh</strong>&nbsp;to our scene.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_133.png" width="331"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Just like we did for the poles we need to load in a&nbsp;<strong>Mesh File</strong>, same as before click into the line and select the little box at the end and choose the&nbsp;<strong>Waiter</strong>&nbsp;model.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_134.png" width="696"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Each model will be unique and will take some time figuring out the initial positioning and rotations to suit your game, its mostly trial and error, so for now use these values on the player mesh. Position Z -190, this setting will bring him back closer to the camera, Rotation X 40 this will tilt him slightly back so hes facing the camera at a better angle.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_135-1.png" width="328"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">If you have pressed play which i'm sure you have done you will see that he starts to go through all of his animations and then loops back to the start, that's because we havent told him what to do yet.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_137.png" width="640"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Lets break our game into 4 sections, Waiting, Starting, Playing, Lost, using the insert menu insert 4 new groups make sure only the waiting one is ticked to be active at the start and untick the other 3.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_139.png" width="821"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">In the waiting section we want him to be waving at us, so create a new condition called Start of Frame,&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3550/chocobreak_html_143.png"><img alt="" src="./files/chocobreak_html_143.816x0-is.png" width="816"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Most models that you get from the internet will come with a keyframe list that denote what frames make up the animations of the model, but for now you will need to trust me, for now we will tell him just to stand there waving, goto the Frame Editor find the animated mesh in the list at the top then under the "<strong>Start of Frame</strong>" line add another action, by using the right mouse and choose&nbsp;<strong>Animation -&gt; Play Animation by frame range</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3550/chocobreak_html_115.png"><img alt="" src="./files/chocobreak_html_115.860x525-cropx0y1-is.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Choose 9 for the start Frame and 17 for the end frame, &nbsp;that will keep him busy, until we press the spacebar to show were ready to play, he will then rotate to face the game and put his "Carrying Tray" down on the floor to help him hit the ball. Still in the Waiting events section, create a new condition<strong> The Keyboard -&gt; Upon pressing a key</strong> in the popup press the <strong>Space Bar</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_113.png" width="668"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Find the animated mesh in the list at the top then under the "Upon pressing Space Bar" line add another action, by using the right mouse and choose&nbsp;<strong>Animation -&gt; Play Animation by Frame range, </strong>in the popup window select the <strong>Animation -&gt; Get current frame</strong>&nbsp;for the Starting frame and <strong>36</strong> for the end frame.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_114.png" width="568"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">That will make our lil waiter stop waving and put his tray down, once hes done that he will wave again and put his tray down again, because by default animations are set to LOOP,&nbsp;we need to turn it off so right mouse the grid again and choose&nbsp;<strong>Animation -&gt; Looping -&gt; Off</strong>,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3550/chocobreak_html_116.png"><img alt="" src="./files/chocobreak_html_116.965x596-cropx0y1-is.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">That will take care of stopping him waving and lowering the tray to the floor, now we need to turn him around and stand him back up straight becuase we tilted him earlier, we are going to set his current angle to a alterable variable to keep track of it. in the same&nbsp;"Upon pressing Space Bar" line select <strong>Alterable Values -&gt; Set</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_117.782x367-cropx0y1-is.png" width="782"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">In the popup window you need to select <strong>Node  Properties -&gt; Rotation -&gt; Get X Angle</strong>, the menu system will convert your selection into&nbsp;<strong>XRotation( "Firefly Node - Animated Mesh" )</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3550/chocobreak_html_119.png"><img alt="" src="./files/chocobreak_html_119.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now we have everything setup we need to turn of the waiting events and switch to the Starting events, in the same&nbsp;"Upon pressing Space Bar" line and under "<strong>Special Conditions</strong>" select <strong>Group of events -&gt; Activate</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_147.png" width="695"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">In the little popup select Starting, then do the same again but this time choose Deactivate and then select Waiting. Once done your total events should match this.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3550/chocobreak_html_136.png"><img alt="" src="./files/chocobreak_html_136.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">In the Starting group we will be doing all the things that only happen once like putting the ball in the middle of the board and resetting bricks if they need resetting etc, but for now we just need to turn our waiter round, as we have the angle in the alterable value A , we need to check if its back at 0 if not rotate him some more, so create a new condition click on the animated mesh icon and select&nbsp;<strong>Alterable Values -&gt; Compare to one of the alterable values</strong>&nbsp;in the popup set it to greater and make sure its set at 0.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_161.png" width="755"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">this will now continue to do something until the alterable value is smaller or equal to 0, so what exactly do we need to do, first we need to change the tilt of the waiter back to upright, his tilt was based on his X angle. so lets set the X Angle to X Angle -1, just like we did with rotating the poles&nbsp;choose&nbsp;<strong>Node&nbsp; Properties</strong>&nbsp;-&gt;&nbsp;<strong>Rotation</strong>&nbsp;-&gt;&nbsp;<strong>Set X Angle</strong>. In the popup you want&nbsp;<strong>XRotation( "Firefly Node - Animated Mesh" ) - 1</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_162.png" width="514"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">While also standing him up straight we want him to turn and face the board so we need to also rotate his Y angle, so create another event but this time choose&nbsp;<strong>Node&nbsp; Properties</strong>&nbsp;-&gt;&nbsp;<strong>Rotation</strong>&nbsp;-&gt;&nbsp;<strong>Set Y Angle</strong>. In the popup you want&nbsp;<strong>YRotation( "Firefly Node - Animated Mesh" ) - 4.5 </strong>now his rotation is sorted out we need to ensure he stops when he reaches 0 so we need to set the alterable value A based on his X Rotation again. just like you did for the&nbsp;"Upon pressing Space Bar" line select add in a&nbsp;<strong>Alterable Values -&gt; Set </strong>and once again&nbsp;In the popup window you need&nbsp;<strong>XRotation( "Firefly Node - Animated Mesh" ).</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_163.png" width="745"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Create a new condition and with the Animated mesh again choose &nbsp;<strong>Alterable Values -&gt; Compare to one of the alterable values</strong>&nbsp;in the popup set it to <strong>lower or equal to</strong> and make sure its set at 0. this time you want to <strong>Activate Playing</strong> and <strong>Deactivate Starting</strong>, although there is more to go in here but we will come back to them later.<br>
+			Press Play now and watch how he turns after you press the space bar.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_164.png" width="642"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-12.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-14.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

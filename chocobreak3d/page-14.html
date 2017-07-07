@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+
+<body ><h1>14: UP AND RUNNING</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>Our Waiter is in and facing the correct way, now we need to let the player control him.&nbsp;We need him to walk left and right now, so lets set a new condition&nbsp;<strong>Upon pressing a key</strong>&nbsp;when asked which key press the&nbsp;<strong>Left cursor</strong>&nbsp;key on your keyboard. Do the same&nbsp;again this time press the&nbsp;<strong>Right cursor</strong>&nbsp;key on your keyboard, for the left key&nbsp;<strong>Animation -&gt; Play Animation by Frame range</strong>&nbsp;and type 50&nbsp;to 55, for the right key&nbsp;<strong>Animation -&gt; Play Animation by frame range</strong>&nbsp;and type 60 to 65. although he now looks like hes walking he isnt actually moving so now we need to change his position as he walks.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_165.png" width="685"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Make a new condition only this time choose&nbsp;<strong>Repeat while key is pressed</strong>&nbsp;when asked choose the left cursor key and create another one for the right cursor key. in the grid square for the animated mesh and the repeat left condition select right mouse and choose&nbsp;<strong>Node  Properties -&gt; Position -&gt; Set X Co-ordinate</strong>&nbsp;be careful not to choose the Position near the top as that is the 2D Position not the 3D one.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_144.png" width="657"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">To answer the expression you need to Right Mouse the animated mesh icon in the Frame at the bottom and select&nbsp;<strong>Node  Properties -&gt; Position -&gt; Get X Co-ordinate</strong>&nbsp;again be careful not to choose the 2d one near the top.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3553/chocobreak_html_145.png"><img alt="" src="./files/chocobreak_html_145.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Once thats done in the text window you need to add -1 as this will make the waiter move to the left. do the same for the&nbsp;<strong>Repeat while 'Right arrow' is pressed</strong>&nbsp;only add + 1 to make him move right.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_146.png" width="509"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now you may have noticed if you run the program that the waiter can move all the way left and off screen and all the way right and off screen.&nbsp;We need to stop moving him &nbsp;when he goes too far, to do this we can simply add a limit to the repeat while pressed command. Right click on&nbsp;<strong>Repeat while 'Left Arrow' is pressed</strong>&nbsp;and choose&nbsp;<strong>Insert</strong>&nbsp;we are now choosing a second rule to ensure he stays in the screen.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_148.png" width="817"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Right mouse the animated mesh icon and select&nbsp;<strong>Node  Properties -&gt; Position -&gt; Compare X Position to a value</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Change the comparison method to&nbsp;<strong>Greater</strong>&nbsp;and enter a value of -170, this means that if the man goes too far left and his X location becomes smaller than -90 then dont let him walk anymore.&nbsp;Do the same for the right arrow but this time choose&nbsp;<strong>Lower</strong>&nbsp;than 150, if you did it correctly it should match mine below. Run the game and have a little test to see how he walks.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_152.png" width="809"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">If we ignore the fact he slides along the floor, as he's supposed to do that, when you let go of the left or right button he stays with his leg in the air, lets fix that by adding a if the player lets go of any button then have him bounce in a little idle animation. To do this we need to set one of the animated mesh's&nbsp;<strong>State flag's</strong>&nbsp;whats a state flag i hear you ask, its basically just setting up in memory whether hes walking or not, so when we start walking we set the flag then when we stop moving we can unset it, right mouse the grid where Upon pressing "Left Arrow" and the Animated Mesh meet select <strong>Flags -&gt; Set on </strong>leave the &nbsp;popup at 0, do the same for Upon pressing "Right Arrow"</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_141.png" width="775"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>Right click on&nbsp;<strong>New condition</strong>&nbsp;then right click on the animated mesh icon select&nbsp;<strong>Alterable Values -&gt; Flags -&gt; Is flag on?, </strong>again leave the default 0 in the popup window.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_140.png" width="751"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>Normally at this stage we would put a tick into one of the grids, however we haven't actually finished the condition yet as so far we just have is the player walking, what we actually need is the player walking and not pressing any direction buttons. lets add a check for the left arrow not being pressed, right mouse the condition we just added and select&nbsp;<strong>Insert</strong>.<br>
+			&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_142.png" width="409"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>The check we need is if player isnt pressing left arrow however if you look at the keyboard object we only have if keys are pressed, however we can negate a condition so it means the opposite, so select&nbsp;<strong>The Keyboard -&gt; Repeat while key is pressed</strong>&nbsp;when asked press the&nbsp;<strong>Left Arrow</strong>&nbsp;on the keyboard then right mouse it and select&nbsp;<strong>Negate </strong>it should have a red X next to it if you negated it properly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_160.png" width="409"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>Insert&nbsp;another &nbsp;<strong>The Keyboard -&gt; Repeat while key is pressed</strong>&nbsp;when asked press the&nbsp;<strong>Right Arrow</strong>&nbsp;on the keyboard then <strong>Negate </strong>it also<strong>.&nbsp;</strong>Once they are both negated choose the animated mesh grid square and set the <strong>Animation -&gt; Play Animation by Frame range</strong>&nbsp;between 30 and 50</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_143.png" width="610"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now we have checked if he was walking but has now stopped and changed him to do a bounce animation, we now need to set his flag back off, right click&nbsp;the animated mesh grid square again and select <strong>Flags -&gt; Set Off, </strong>we currently have looping off which means he will only bounce once so we need right mouse again and select<strong> Animation -&gt; Looping -&gt; On. </strong>as we turned looping on it will mess up the walking as that was off so we need to go back to the<strong> &nbsp;Upon pressing "Left Arrow" </strong>line and add in a&nbsp;Animation -&gt; Looping -&gt; Off. and also one for the<strong>&nbsp;&nbsp;Upon pressing "Right Arrow" </strong>line. check your Playing Section looks like this.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_153.png" width="731"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">When your done have a quick play we have the world, we have the floor and walls and now we have our player,&nbsp;<strong>WELL DONE</strong>&nbsp;all we need now is a ball and some bricks.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-13.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-15.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

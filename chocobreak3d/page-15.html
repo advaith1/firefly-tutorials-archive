@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<body><h1>15: THE SWEET BALL</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>We have the walls we have the player all we need now is a ball and then some bricks so first the ball.By now you should know how to add new objects so add a new&nbsp;<strong>Firefly Node - Primitive</strong>&nbsp;and rename it&nbsp;<strong>Ball</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_154.png" width="327"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">For the ball settings we are going to introduce a few new things and hopefully some old things too. Set the ball Primitive Type to <strong>Sphere</strong> and set its Radius to <strong>16</strong>&nbsp;and set its Transpose 2D to <strong>Transpose 2dx -&gt; 3dx, 2dy -&gt; 3dz</strong>. ok so what did we just do? we told the firefly engine to take its position on the 2d Frame X and Y and transpose them into the 3d world putting them into the X and Z values. if you look at the  Properties now you will see that X and Z have been turned off.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_155.png" width="304"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Its also put some very dodgy numbers in there for me (in my case its -308 and 62) yours will be different, so what are these numbers and where did they come from ? Before we look into that set the balls <strong>Position Y</strong> to <strong>16</strong>&nbsp;to match its radius.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3556/chocobreak_html_156.png"><img alt="" src="./files/chocobreak_html_156.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">If like me you have just been dumping your objects anywhere they could be a right mess, as we are now transposing the ball from the Frame we need to tidy up a little bit, move all your icons out the way and into a nice little row across the bottom. then to help us visually lets drag out the images we used from the first chocobreak tutorial, you do remember that right ? Open the "<strong>Library</strong>" window, on the bottom-left of your display. in the tree, Click on the "<strong>Tutorial</strong>" folder, Locate the "<strong>Chocobreak Tutorial</strong>" line and double click on it to open it.&nbsp;drop out some matching images "<strong>SugarVertical1</strong>",&nbsp;"<strong>SugarHorizontal</strong>" and "<strong>SugarVertical2</strong>".
+			<p>Using the values in the image make yours look like this.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3556/chocobreak_html_157.png"><img alt="" src="./files/chocobreak_html_157.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">I'm sure the clever ones amongst you have sussed out that our board is upside down, its important to remember that while the 3d world and the 2d can co-exist you need to ensure the values stay the same, in the 3D world we placed our red top pole at 200 Z which was at the top, as the 2d world has the higher values coming down it has been reversed, we could of placed our 3D camera at +200 Z and that would of then meant we need to place our top pole at -200 so this 2D world would of then matched but then i couldn;t explain all this. If that was really confusing don't worry about it too much, just remember if something is -200 in 2D it will be -200 in 3D aswell.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_158.png" width="331"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>If you click "<strong>Run Frame</strong>" now, you will see that I sneakily hid the ball behind the waiter so we dont see it until he turns around, also you may noticed that the ball does not move. We could use the Firefly Movement Object but this tutorial is to help show that the 2D world and the 3D world can mix. Just like the 2D objects some Firefly Nodes have movement tabs, so lets assign the ball a&nbsp;<strong>movement property</strong>&nbsp;to our ball and define how that movement will work in our game.</p>
+
+			<p>Locate the one called "<strong>Movement</strong>" Tab and click on it.&nbsp;Locate the line "<strong>Type</strong>", and click on it. This opens a combo box displaying all the different genres of movement. Select the "<strong>Bouncing ball</strong>" entry. click on the "Initial direction" and set the dial like this.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_159.png" width="190"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">For now set the <strong>speed</strong> to <strong>10</strong>, and run the game again. becuase the ball has Transposing on it the ball in the 3d world matches what the ball in the 2D world has done.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_151.png" width="638"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">I bet you feel sorry for the waiter as he watches his ball fly away into the distance, hopefully you know that we need to add collision events but also we need the ball to wait until the waiter is ready so set the <strong>movement speed</strong> down to <strong>0,</strong> so the ball waits until we are ready to play. Locate the grid line inside the <strong>Waiting</strong> group called Upon pressing "Space bar" and the "ball" mesh - be careful as there are a few primitives, select <strong>Movement -&gt; Set Speed</strong> and enter <strong>10</strong> into the popup.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_166.png" width="805"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now the ball moves at the right time lets make it bounce off the walls, create a new condition in the <strong>Playing</strong> section, <strong>Select the Ball -&gt; Collisions -&gt; Another object</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_167.png" width="774"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">In the popup select the&nbsp;"<strong>SugarHorizontal</strong>" object, we also want to check it against the side walls aswell so right mouse the condition we just made and select <strong>OR</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_168.png" width="342"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">create another collision condition between the ball and&nbsp;"<strong>SugarVertical1</strong>", insert another <strong>OR</strong> and another collision with "<strong>SugarVertical2</strong>". hopefully it looks like this.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_169.png" width="287"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">So now we have a condition that will trigger if the ball collides in 2D with any of the poles - locate the grid square where the ball is and choose <strong>Movement -&gt; Bounce. </strong>give the game a quick check to make sure everything is working as it should. You noticed that the waiter cant hit the ball, you probably also noticed hes in 3D not 2D so how are we going to handle his collision? we will set up the 3D collisions. Collisions in 3D happen between a sphere and a mesh, luckily we just happen to have a sphere and a mesh, so goto the  Properties of the ball and tick the <strong>Use Collisions</strong>&nbsp;box and set the all 3 Radius to 16.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_170.png" width="326"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Now goto the <strong>Animated Mesh</strong>  Properties and turn on his <strong>Use Collisions</strong> box too, although he doesn't a radius, only the thing doing the checking needs a radius the object being hit just needs collisions turned on. In the <strong>Playing</strong> section create a new condition this time we will use the 3D collision option which is further down select the <strong>ball</strong> and choose <strong>Has collided with a particular node</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_171.png" width="566"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">The popup is asking which <strong>Fixed Value</strong> should it check for everything in the Firefly World is given a Fixed value its used to make sure we have the correct object this allows us to have 3 balls for example and lets us know exactly what each balls unique value is. so we need to tell this popup that we want the waiter fixed value, so find the&nbsp;<strong>Animated Mesh</strong>&nbsp;icon and right mouse it and select <strong>Retrieve fixed value</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_172.png" width="643"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">We cant use the movement bounce action this time as that checks which direction in 2d that it hit something. so instead we are just going to send the ball back up at a random angle, we could work out what part of the mesh it hit and then send it back in the correct direction but we just want to keep it simple for this tutorial. locate the ball grid line and click it and select <strong>Direction -&gt; Select direction</strong> just like at the start select the opposite arrows as our world is upside down.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_159.png" width="190"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Thats the ball pretty much done, except we never added a material to it and its just a white ball. Can you remember how to add another material to the&nbsp;<strong>Material Cache</strong>, if not go back to <a href="page-10/">step 10</a> and refresh your memory. The new material we want to add to the cache should be called&nbsp;<strong>Sweetball</strong>&nbsp;and&nbsp;<strong>Texture1</strong>&nbsp;should be the image called&nbsp;<strong>Sweet</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_176.png" width="550"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">As before at the start of Frame you need to add the event&nbsp;<strong>Load Material</strong>&nbsp;from cache slot 5. (see <a href="page-8/">step 8</a> if you forgotten how to do this bit) just like the poles we did before I think we need the Ambient (Shadows) to be 0,0,0 black and the Emmisive colour to be 192,192,192.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_129.png" width="330"><img alt="" src="./files/chocobreak_html_131.png" width="349"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">If you check the game now you will probably notice the ball looked a bit wierd sliding across the floor rather than rolling, getting a ball rolling using true physics is a bit beyond the level for this tutorial so we will just add some very basic rolling logic which if your feeling upto it later you can expand upon.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><a href="http://library.clickteam.com/site/assets/files/3556/chocobreak_html_173.png"><img alt="" src="./files/chocobreak_html_173.800x0-is.png" width="800"></a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Right Click the grid where the Ball and Always meet and select&nbsp;<strong>Node  Properties -&gt; Rotation -&gt; Set Rotation</strong>, we are simply just going to rotate the ball based on where on the floor the ball is, so for the X angle we need the Z position of the Ball, click the ball and choose&nbsp;<strong>Node Properties -&gt; Position -&gt; Get Z Coordinate</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_174.png" width="798"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Although that will rotate the ball its a bit slow so lets make it a bit faster by multiplying it by 5 make the text read "<strong>ZPosition( "Ball" ) * 5</strong>", for the Y value leave it at 0 and for the Z value we need the X Position so click the ball again and choose&nbsp;<strong>Node  Properties -&gt; Position -&gt; Get X Coordinate</strong>&nbsp;then change the text to read&nbsp;<strong>0 - XPosition( "Ball" ) * 2</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_175.png" width="636"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">It doesnt look very realistic when we run it but i think its better than it sliding along.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-14.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-16.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+
+<body>
+<h1>5: ADDING A SKY TO OUR WORLD</h1><hr class="page"><div class="tutorial_text"><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="3">
+			<p>OK, so we have our empty world lets fill it with the things we need for our 3D Breakout game, but first we need to make that blue sky look more skylike. Just like you did with the engine and the camera add a&nbsp;<strong>Firefly Sky</strong>&nbsp;to the Frame. Don't worry about resizing it or where you put it as it will cover the whole of the inside of your world no matter where it is on the frame.</p>
+
+			<p>There are 2 types of sky, a&nbsp;<strong>Skydome</strong>&nbsp;which uses 1 image and wraps it around a spherical sky, which although looks good has issues when you look straight up or straight down, there is also the second type of sky called a&nbsp;<strong>Skybox</strong>&nbsp;which uses 6 different images and places you inside a cubed sky which if the images are done correctly you can never tell is a cube.</p>
+
+			<p>we will be setting up a skybox today as its by far the most popular and you can download premade skyboxes from many places on the internet mostly for free. we have provided you with one called tropical sunset by Heiko Irrgang, Based on a work at <a href="http://93i.de/">http://93i.de</a>.</p>
+
+			<p>To set each side texture of our skybox we need to find the skybox directory which is part of this tutorial (in the Tutorials\Firefly\Chocobreak3D subdirectory of  Clickteam Fusion) and select the correct image for the correct direction</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:40%">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="width:40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_15.png" width="326"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">click this button next to&nbsp;<strong>Top</strong>, you will have to click in the space to show the button.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_16.png" width="326"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">click the&nbsp;<strong>Import</strong>&nbsp;button at the top left of the image editor that opens up.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_17.png" width="550"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Navigate to the Skybox directory and then the&nbsp;<strong>TropicalSunnyDay</strong>&nbsp;directory and select the&nbsp;<strong>Top</strong>&nbsp;image and click&nbsp;<strong>Open</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_18.png" width="677"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">You should now be seeing the&nbsp;<strong>Import Options</strong>&nbsp;these are all set by default so just select&nbsp;<strong>OK</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_19.png" width="490"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">You are now back at the edit image window where you could add any extra touches but as we dont need to we can just select&nbsp;<strong>OK</strong>.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_20.png" width="331"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">You should now see that the top image is displayed in a very small box in the  Properties line. do the same thing for the other 5 positions of the sky using the correct images for the correct places, such as Left for left etc.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_21.png" width="331"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">Click&nbsp;<strong>Run Frame</strong>&nbsp;like before and lets look at our wonderful skybox.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center"><img alt="" src="./files/chocobreak_html_22.png" width="642"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="page-4.html">Previous step.</a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<ul>
+				<li><a href="page-6.html">Next step.</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body></html>
